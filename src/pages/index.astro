@@ -1,0 +1,791 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const PHONE_NUMBER = "56987753925";
+const WHATSAPP_BASE = `https://wa.me/${PHONE_NUMBER}`;
+
+const WHATSAPP_AUDIT_URL = `${WHATSAPP_BASE}?text=Hola!%20Vi%20tu%20web%20en%20Hastur%20Studio%20y%20me%20gustar%C3%ADa%20una%20auditor%C3%ADa%20t%C3%A9cnica%20de%20mi%20tienda%20Shopify`;
+const WHATSAPP_PACK_OPTIMIZACION = `${WHATSAPP_BASE}?text=Hola!%20Me%20interesa%20el%20Pack%20de%20Optimizaci%C3%B3n%20y%20Velocidad%20para%20mi%20tienda%20Shopify.`;
+const WHATSAPP_PACK_LLAVE_EN_MANO = `${WHATSAPP_BASE}?text=Hola!%20Me%20gustar%C3%ADa%20cotizar%20el%20desarrollo%20de%20una%20Tienda%20Llave%20en%20Mano%20en%20Shopify.`;
+const WHATSAPP_PACK_MODULOS = `${WHATSAPP_BASE}?text=Hola!%20Necesito%20un%20m%C3%B3dulo%20t%C3%A9cnico%20puntual%20en%20mi%20tienda.`;
+
+const EMAIL_CONTACT = "brunoruizn@gmail.com";
+
+const microStack = [
+  { name: "Shopify Partner", tag: "Certified" },
+  { name: "Liquid Engine", tag: "Native" },
+  { name: "WebP Pipeline", tag: "WPO 99+" },
+  { name: "Webpay & Mercado Pago", tag: "Local APIs" },
+  { name: "Blue Express Ready", tag: "Fulfillment" }
+];
+---
+
+<Layout>
+  <!-- ========================================================================= -->
+  <!-- A. HEADER / NAVBAR FIJA                                                  -->
+  <!-- ========================================================================= -->
+  <header class="sticky top-4 z-40 w-full px-4 sm:px-6">
+    <nav class="mx-auto max-w-5xl rounded-full border border-white/[0.08] bg-brand-dark-surface/85 px-4 sm:px-6 py-2.5 backdrop-blur-md shadow-2xl transition-all duration-300">
+      <div class="flex items-center justify-between">
+        
+        <!-- Logo de marca -->
+        <a href="#" class="group flex items-center space-x-2 font-mono text-base font-bold tracking-tight text-white transition-colors">
+          <span class="inline-block h-2 w-2 rounded-full bg-brand-accent animate-pulse-subtle"></span>
+          <span>HASTUR<span class="text-brand-accent">.studio</span></span>
+        </a>
+
+        <!-- Enlaces ancla en desktop -->
+        <div class="hidden md:flex items-center space-x-7 text-xs font-mono tracking-wider uppercase text-slate-400">
+          <a href="#manifiesto" class="transition-colors hover:text-brand-accent">Manifiesto</a>
+          <a href="#soluciones" class="transition-colors hover:text-brand-accent">Soluciones</a>
+          <a href="#caso-estudio" class="transition-colors hover:text-brand-accent">Caso de Estudio</a>
+        </div>
+
+        <!-- CTA Header -->
+        <a
+          href={WHATSAPP_AUDIT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group inline-flex items-center space-x-2 rounded-full border border-brand-accent/30 bg-brand-accent/[0.08] px-3.5 sm:px-4 py-1.5 text-xs font-mono font-medium text-brand-accent transition-all duration-200 hover:border-brand-accent hover:bg-brand-accent hover:text-brand-dark hover:shadow-neon-glow"
+        >
+          <span>Auditoría por WhatsApp</span>
+          <span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ========================================================================= -->
+  <!-- B. HERO SECTION (Alto impacto visual)                                    -->
+  <!-- ========================================================================= -->
+  <section class="relative pt-16 sm:pt-24 pb-16 sm:pb-24 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+    <!-- Luz difusa de fondo ambiental -->
+    <div class="absolute -top-12 left-1/2 -translate-x-1/2 w-96 h-96 bg-brand-accent/[0.07] blur-[120px] rounded-full pointer-events-none" aria-hidden="true"></div>
+
+    <div class="relative flex flex-col items-start text-left">
+      <!-- Badge superior -->
+      <div class="inline-flex items-center space-x-2.5 rounded-full border border-brand-accent/20 bg-brand-accent/[0.06] px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-brand-accent mb-6 sm:mb-8 backdrop-blur-sm">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-accent opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-accent"></span>
+        </span>
+        <span class="font-medium">DESARROLLO TÉCNICO & OPERATIVA E-COMMERCE EN CHILE</span>
+      </div>
+
+      <!-- Slogan / H1 -->
+      <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.12] max-w-4xl">
+        Tiendas Shopify más rápidas, con <span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-slate-100 to-brand-accent">identidad propia</span> y forjadas para vender en serio.
+      </h1>
+
+      <!-- Slogan secundario destacado -->
+      <p class="mt-4 font-mono text-sm sm:text-base text-brand-accent/90 tracking-wide uppercase">
+        "El mercado está inundado de clones. Construyo presencias digitales imposibles de ignorar."
+      </p>
+
+      <!-- Bajada en primera persona -->
+      <p class="mt-6 text-base sm:text-lg text-slate-400 max-w-3xl leading-relaxed">
+        No instalo temas genéricos que hacen que tu tienda se confunda con 10.000 competidores. Como operador activo y desarrollador técnico, construyo arquitecturas Shopify a medida con código Liquid limpio, velocidad de carga instantánea, pasarelas locales integradas y blindaje operativo ante el SERNAC.
+      </p>
+
+      <!-- Botón CTA Principal -->
+      <div class="mt-8 sm:mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 w-full sm:w-auto">
+        <a
+          href={WHATSAPP_AUDIT_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group relative inline-flex items-center justify-center space-x-3 rounded-xl bg-brand-accent px-6 py-4 text-sm font-mono font-bold tracking-wide text-brand-dark transition-all duration-300 hover:bg-brand-accent-hover hover:shadow-neon-glow hover:-translate-y-0.5 active:translate-y-0"
+        >
+          <span>Solicitar auditoría técnica vía WhatsApp</span>
+          <span class="text-lg transition-transform duration-300 group-hover:translate-x-1">→</span>
+        </a>
+
+        <a
+          href={`mailto:${EMAIL_CONTACT}`}
+          class="inline-flex items-center justify-center space-x-2 rounded-xl border border-white/10 bg-brand-dark-surface/60 px-5 py-4 text-xs font-mono text-slate-300 transition-colors hover:border-brand-accent/40 hover:text-white"
+        >
+          <svg class="w-4 h-4 text-brand-accent" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+          </svg>
+          <span>brunoruizn@gmail.com</span>
+        </a>
+      </div>
+
+      <!-- Micro-stack técnico (Badges) -->
+      <div class="mt-12 pt-8 border-t border-white/[0.08] w-full">
+        <p class="font-mono text-xs uppercase tracking-widest text-slate-500 mb-4">
+          Stack de Operación & Arquitectura
+        </p>
+        <div class="flex flex-wrap gap-2.5">
+          {microStack.map((item) => (
+            <div class="inline-flex items-center space-x-2 rounded-lg border border-white/[0.07] bg-brand-dark-card/90 px-3.5 py-1.5 backdrop-blur-sm transition-all duration-200 hover:border-brand-accent/40 hover:bg-brand-dark-cardHover">
+              <span class="h-1.5 w-1.5 rounded-full bg-brand-accent"></span>
+              <span class="text-xs font-mono font-medium text-slate-200">{item.name}</span>
+              <span class="text-[10px] font-mono uppercase text-slate-500 border-l border-white/10 pl-2">{item.tag}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <!-- Panel de Telemetría WPO & Arquitectura (Visual Cyber-Clean) -->
+      <div class="mt-8 w-full rounded-2xl border border-white/[0.08] bg-brand-dark-card/90 p-5 sm:p-6 backdrop-blur-md shadow-2xl relative overflow-hidden">
+        <div class="absolute -right-20 -bottom-20 w-60 h-60 bg-brand-accent/[0.04] rounded-full blur-3xl pointer-events-none"></div>
+
+        <div class="flex flex-wrap items-center justify-between gap-4 border-b border-white/[0.06] pb-4 font-mono text-xs text-slate-400">
+          <div class="flex items-center space-x-2">
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span>
+            <span class="text-white font-medium">TERMINAL DE RENDIMIENTO & ARQUITECTURA</span>
+          </div>
+          <span class="text-brand-accent">SHOPIFY ONLINE STORE 2.0 // PURE LIQUID</span>
+        </div>
+
+        <div class="mt-4 grid grid-cols-2 sm:grid-cols-4 gap-4 text-left">
+          <div class="p-3 rounded-xl bg-brand-dark-deep/80 border border-white/[0.04]">
+            <div class="text-[11px] font-mono text-slate-500">SPEED INDEX (4G CL)</div>
+            <div class="mt-1 font-mono text-xl sm:text-2xl font-bold text-brand-accent">0.8s</div>
+            <div class="text-[10px] text-slate-400 font-mono">Mobile First Real</div>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-dark-deep/80 border border-white/[0.04]">
+            <div class="text-[11px] font-mono text-slate-500">CORE WEB VITALS</div>
+            <div class="mt-1 font-mono text-xl sm:text-2xl font-bold text-white">99<span class="text-xs text-brand-accent">/100</span></div>
+            <div class="text-[10px] text-emerald-400 font-mono">Cumplimiento Verde</div>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-dark-deep/80 border border-white/[0.04]">
+            <div class="text-[11px] font-mono text-slate-500">TIME TO FIRST BYTE</div>
+            <div class="mt-1 font-mono text-xl sm:text-2xl font-bold text-white">&lt; 180ms</div>
+            <div class="text-[10px] text-slate-400 font-mono">Edge CDN Caché</div>
+          </div>
+          <div class="p-3 rounded-xl bg-brand-dark-deep/80 border border-white/[0.04]">
+            <div class="text-[11px] font-mono text-slate-500">SCRIPTS BASURA</div>
+            <div class="mt-1 font-mono text-xl sm:text-2xl font-bold text-brand-accent">0%</div>
+            <div class="text-[10px] text-slate-400 font-mono">Sin apps residuales</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- C. MANIFIESTO / DIFERENCIADOR (Tarjeta destacada)                         -->
+  <!-- ========================================================================= -->
+  <section id="manifiesto" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+    <div class="relative rounded-3xl border border-brand-accent/25 bg-gradient-to-b from-brand-dark-card to-brand-dark-surface p-7 sm:p-12 backdrop-blur-xl shadow-2xl overflow-hidden">
+      
+      <!-- Efecto radial en esquina -->
+      <div class="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-brand-accent/10 blur-[80px] pointer-events-none" aria-hidden="true"></div>
+
+      <div class="relative z-10">
+        <!-- Subtítulo técnico de sección -->
+        <div class="inline-flex items-center space-x-2 font-mono text-xs font-semibold uppercase tracking-widest text-brand-accent mb-4">
+          <span>[ // MANIFIESTO Y PROPÓSITO OPERATIVO ]</span>
+        </div>
+
+        <!-- Encabezado del manifiesto -->
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-white leading-tight">
+          ¿Prefieres un portafolio con 20 temas idénticos, o una estructura digital con criterio técnico y ventas reales?
+        </h2>
+
+        <!-- Cuerpo del manifiesto -->
+        <p class="mt-6 text-base sm:text-lg text-slate-300 leading-relaxed font-normal">
+          Cualquiera puede instalar una plantilla prefabricada y mover tres bloques en una tarde. Mi trabajo es distinto: opero mi propia infraestructura de comercio electrónico en Chile. Sé exactamente dónde se pierden ventas en conexiones 4G, cómo estructurar metacampos para catálogos complejos, cómo evitar rechazos en pasarelas de pago y cómo configurar una logística que no queme tu margen en fletes cruzados.
+        </p>
+
+        <!-- Grilla de contraste de valor: Desarrollo Directo vs Agencia -->
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 pt-8 border-t border-white/[0.08]">
+          <div class="rounded-xl border border-rose-500/20 bg-rose-950/10 p-5">
+            <div class="flex items-center space-x-2 text-rose-400 font-mono text-xs uppercase font-semibold mb-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" /></svg>
+              <span>El modelo tradicional de agencia</span>
+            </div>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-400">
+              <li class="flex items-start space-x-2">
+                <span class="text-rose-400">×</span>
+                <span>Intermediarios ejecutivos de cuenta que no tocan una línea de código.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-rose-400">×</span>
+                <span>Instalación indiscriminada de 15 apps de pago mensual que destruyen la velocidad.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-rose-400">×</span>
+                <span>Desconocimiento total de la logística nacional y problemas de pasarelas con Transbank.</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="rounded-xl border border-brand-accent/30 bg-brand-accent/[0.04] p-5 shadow-neon-subtle">
+            <div class="flex items-center space-x-2 text-brand-accent font-mono text-xs uppercase font-semibold mb-2">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" /></svg>
+              <span>El enfoque Hastur Studio</span>
+            </div>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300">
+              <li class="flex items-start space-x-2">
+                <span class="text-brand-accent">✓</span>
+                <span>Contacto directo con el desarrollador que programa la tienda y entiende el inventario.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-brand-accent">✓</span>
+                <span>Funcionalidad nativa en Liquid y metaobjetos sin costos recurrentes injustificados.</span>
+              </li>
+              <li class="flex items-start space-x-2">
+                <span class="text-brand-accent">✓</span>
+                <span>Blindaje SERNAC (Ley 19.496) y calibración fina con couriers en Chile (Blue Express / Starken).</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- D. SOLUCIONES EMPAQUETADAS (3 Packs con Productized Services)             -->
+  <!-- ========================================================================= -->
+  <section id="soluciones" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+    <div class="text-left mb-12">
+      <div class="inline-flex items-center space-x-2 font-mono text-xs font-semibold uppercase tracking-widest text-brand-accent mb-3">
+        <span>[ // SOLUCIONES EMPAQUETADAS & ALCANCE TÉCNICO ]</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-white">
+        Planes transparentes con entrega rápida y precio cerrado.
+      </h2>
+      <p class="mt-3 text-sm sm:text-base text-slate-400 max-w-2xl">
+        Sin cotizaciones infladas, sin tiempos eternos ni costos mensuales recurrentes. Soluciones puntuales diseñadas para generar impacto financiero inmediato.
+      </p>
+    </div>
+
+    <!-- Grid de 3 Tarjetas de Soluciones Empaquetadas -->
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+      
+      <!-- ===================================================================== -->
+      <!-- TARJETA 1: Pack Optimización & Velocidad                              -->
+      <!-- ===================================================================== -->
+      <div class="flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-brand-dark-card/90 p-6 sm:p-7 backdrop-blur-md transition-all duration-300 hover:border-brand-accent/40 hover:bg-brand-dark-cardHover hover:-translate-y-1">
+        <div>
+          <!-- Badge Superior -->
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="inline-flex items-center space-x-1.5 rounded-full border border-brand-accent/25 bg-brand-accent/[0.07] px-3 py-1 font-mono text-[11px] font-semibold tracking-wider text-brand-accent">
+              <span class="h-1.5 w-1.5 rounded-full bg-brand-accent"></span>
+              <span>ENTREGA EN 48 HORAS</span>
+            </span>
+            <span class="font-mono text-xs text-slate-500">PACK 01</span>
+          </div>
+
+          <!-- Título y Para quién es -->
+          <h3 class="text-xl font-bold text-white tracking-tight">
+            Pack Optimización & Velocidad
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed min-h-[40px]">
+            Para tiendas activas que se sienten lentas, pierden ventas en móviles o necesitan orden técnico.
+          </p>
+
+          <!-- Precio Ancla -->
+          <div class="my-6 py-4 border-y border-white/[0.06]">
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Inversión única</span>
+            <div class="flex items-baseline space-x-2 mt-1">
+              <span class="font-mono text-2xl sm:text-3xl font-bold text-white tracking-tight">Desde $120.000</span>
+              <span class="font-mono text-xs text-brand-accent uppercase font-medium">CLP líquidos</span>
+            </div>
+          </div>
+
+          <!-- Puntos Clave Incluidos -->
+          <ul class="space-y-3 text-xs sm:text-[13px] text-slate-300">
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Auditoría técnica y corrección de puntos de fuga de conversión.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Conversión y estandarización completa de imágenes/banners a formato WebP ultraliviano.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Optimización de ficha de producto móvil con Liquid (botones fijos, jerarquía y velocidad).</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Purga de código residual y desinstalación de scripts obsoletos.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Blindaje de políticas de cambio y devolución según Ley N° 19.496 (SERNAC).</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA Botón -->
+        <div class="mt-8 pt-4 border-t border-white/[0.06]">
+          <a
+            href={WHATSAPP_PACK_OPTIMIZACION}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group w-full inline-flex items-center justify-center space-x-2 rounded-xl border border-brand-accent/40 bg-brand-accent/[0.08] px-4 py-3.5 text-xs font-mono font-bold text-brand-accent transition-all duration-200 hover:border-brand-accent hover:bg-brand-accent hover:text-brand-dark hover:shadow-neon-subtle text-center"
+          >
+            <span>Consultar Pack Optimización por WhatsApp</span>
+            <span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- TARJETA 2: Tienda Llave en Mano / Reestructuración (DESTACADA)        -->
+      <!-- ===================================================================== -->
+      <div class="relative flex flex-col justify-between rounded-2xl border-2 border-brand-accent bg-gradient-to-b from-brand-dark-card to-brand-dark-surface p-6 sm:p-7 backdrop-blur-xl shadow-neon-glow lg:-translate-y-2.5 z-20">
+        
+        <!-- Badge Flotante Superior: MÁS SOLICITADO -->
+        <div class="absolute -top-3.5 left-1/2 -translate-x-1/2">
+          <span class="inline-flex items-center space-x-1.5 rounded-full bg-brand-accent px-3.5 py-1 font-mono text-[10px] font-bold uppercase tracking-wider text-brand-dark shadow-neon-glow">
+            <span class="h-1.5 w-1.5 rounded-full bg-brand-dark animate-pulse"></span>
+            <span>MÁS SOLICITADO</span>
+          </span>
+        </div>
+
+        <div>
+          <!-- Badge Superior Interno -->
+          <div class="flex items-center justify-between gap-2 mb-4 mt-2">
+            <span class="inline-flex items-center space-x-1.5 rounded-full border border-brand-accent/40 bg-brand-accent/15 px-3 py-1 font-mono text-[11px] font-semibold tracking-wider text-brand-accent">
+              <span class="h-1.5 w-1.5 rounded-full bg-brand-accent animate-ping-slow"></span>
+              <span>DESARROLLO COMPLETO (5 A 7 DÍAS)</span>
+            </span>
+            <span class="font-mono text-xs text-brand-accent font-bold">PACK 02</span>
+          </div>
+
+          <!-- Título y Para quién es -->
+          <h3 class="text-xl font-bold text-white tracking-tight">
+            Tienda Llave en Mano / Reestructuración Total
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-slate-300 leading-relaxed min-h-[40px]">
+            Para marcas que van a lanzar o tiendas que buscan dejar atrás las plantillas genéricas.
+          </p>
+
+          <!-- Precio Ancla -->
+          <div class="my-6 py-4 border-y border-brand-accent/25 bg-brand-accent/[0.04] -mx-6 sm:-mx-7 px-6 sm:px-7">
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-400 block">Arquitectura integral</span>
+            <div class="flex items-baseline space-x-2 mt-1">
+              <span class="font-mono text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Desde $280.000</span>
+              <span class="font-mono text-xs text-brand-accent uppercase font-bold">CLP líquidos</span>
+            </div>
+          </div>
+
+          <!-- Puntos Clave Incluidos -->
+          <ul class="space-y-3 text-xs sm:text-[13px] text-slate-200">
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Arquitectura Shopify desde cero con personalización avanzada en Liquid.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Metacampos y metaobjetos dinámicos (tablas de medidas, especificaciones técnicas).</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Integración certificada de pasarelas locales (Webpay Plus, Mercado Pago, Flow).</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Configuración logística de envíos y zonas (Blue Express, Starken).</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Ecosistema de apps de conversión (Judge.me, Microsoft Clarity, Selleasy).</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Correos transaccionales automatizados en HTML/Liquid con identidad de marca.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Entrega con videocápsulas de capacitación para gestión 100% autónoma.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA Botón Destacado -->
+        <div class="mt-8 pt-4 border-t border-brand-accent/20">
+          <a
+            href={WHATSAPP_PACK_LLAVE_EN_MANO}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group w-full inline-flex items-center justify-center space-x-2 rounded-xl bg-brand-accent px-4 py-4 text-xs font-mono font-bold text-brand-dark transition-all duration-300 hover:bg-brand-accent-hover hover:shadow-neon-glow hover:-translate-y-0.5 text-center"
+          >
+            <span>Cotizar Tienda Llave en Mano</span>
+            <span class="text-sm transition-transform duration-200 group-hover:translate-x-1">→</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- ===================================================================== -->
+      <!-- TARJETA 3: Módulos Técnicos Específicos                              -->
+      <!-- ===================================================================== -->
+      <div class="flex flex-col justify-between rounded-2xl border border-white/[0.08] bg-brand-dark-card/90 p-6 sm:p-7 backdrop-blur-md transition-all duration-300 hover:border-brand-accent/40 hover:bg-brand-dark-cardHover hover:-translate-y-1">
+        <div>
+          <!-- Badge Superior -->
+          <div class="flex items-center justify-between gap-2 mb-4">
+            <span class="inline-flex items-center space-x-1.5 rounded-full border border-white/10 bg-white/[0.04] px-3 py-1 font-mono text-[11px] font-semibold tracking-wider text-slate-300">
+              <span class="h-1.5 w-1.5 rounded-full bg-slate-400"></span>
+              <span>TAREAS PUNTUALES</span>
+            </span>
+            <span class="font-mono text-xs text-slate-500">PACK 03</span>
+          </div>
+
+          <!-- Título y Para quién es -->
+          <h3 class="text-xl font-bold text-white tracking-tight">
+            Módulos Técnicos Específicos
+          </h3>
+          <p class="mt-2 text-xs sm:text-sm text-slate-400 leading-relaxed min-h-[40px]">
+            Para tiendas estables que solo requieren resolver requerimientos puntuales.
+          </p>
+
+          <!-- Precio Ancla -->
+          <div class="my-6 py-4 border-y border-white/[0.06]">
+            <span class="text-xs font-mono uppercase tracking-wider text-slate-500 block">Micro-proyectos</span>
+            <div class="flex items-baseline space-x-2 mt-1">
+              <span class="font-mono text-2xl sm:text-3xl font-bold text-white tracking-tight">Desde $40.000</span>
+              <span class="font-mono text-xs text-brand-accent uppercase font-medium">CLP líquidos</span>
+            </div>
+          </div>
+
+          <!-- Puntos Clave Incluidos -->
+          <ul class="space-y-3 text-xs sm:text-[13px] text-slate-300">
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Programación de secciones Liquid a medida y metacampos dinámicos.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Diseño y maquetación de correos transaccionales en código HTML.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Integración y validación de pasarelas de pago o couriers de despacho.</span>
+            </li>
+            <li class="flex items-start space-x-2.5">
+              <span class="text-brand-accent font-bold mt-0.5">✓</span>
+              <span>Auditoría de checkout y configuración de apps de venta cruzada.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- CTA Botón -->
+        <div class="mt-8 pt-4 border-t border-white/[0.06]">
+          <a
+            href={WHATSAPP_PACK_MODULOS}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group w-full inline-flex items-center justify-center space-x-2 rounded-xl border border-white/20 bg-white/[0.04] px-4 py-3.5 text-xs font-mono font-medium text-slate-200 transition-all duration-200 hover:border-brand-accent/50 hover:bg-brand-accent/[0.08] hover:text-brand-accent text-center"
+          >
+            <span>Consultar requerimiento puntual</span>
+            <span class="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ======================================================================= -->
+    <!-- 2. NUEVA MICRO-SECCIÓN: TRANSPARENCIA COMERCIAL Y RESPALDO              -->
+    <!-- ======================================================================= -->
+    <div class="mt-12 rounded-2xl border border-white/[0.08] bg-brand-dark-surface/90 p-6 sm:p-8 backdrop-blur-md shadow-2xl relative overflow-hidden">
+      <div class="absolute -right-24 -top-24 w-60 h-60 bg-brand-accent/[0.03] rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-3 border-b border-white/[0.06] pb-4">
+        <div class="flex items-center space-x-2">
+          <span class="h-2 w-2 rounded-full bg-brand-accent"></span>
+          <span class="font-mono text-xs font-bold uppercase tracking-wider text-white">Transparencia Comercial & Respaldo Operativo</span>
+        </div>
+        <span class="font-mono text-[11px] text-slate-500">CONTRATACIÓN DIRECTA EN CHILE</span>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Pilar 1: 50% Anticipo / 50% Entrega Probada -->
+        <div class="flex flex-col space-y-2.5 p-4 rounded-xl bg-brand-dark-card/60 border border-white/[0.04] transition-colors hover:border-brand-accent/20">
+          <div class="flex items-center space-x-2.5">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg border border-brand-accent/30 bg-brand-accent/10 text-brand-accent">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+              </svg>
+            </div>
+            <h4 class="font-mono text-xs font-bold text-white uppercase tracking-tight">
+              50% Anticipo / 50% Entrega Probada
+            </h4>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Comenzamos con el 50% inicial. El saldo restante se cancela únicamente cuando la tienda o las mejoras estén operativas y aprobadas por ti en entorno de prueba.
+          </p>
+        </div>
+
+        <!-- Pilar 2: Boleta de Honorarios del SII -->
+        <div class="flex flex-col space-y-2.5 p-4 rounded-xl bg-brand-dark-card/60 border border-white/[0.04] transition-colors hover:border-brand-accent/20">
+          <div class="flex items-center space-x-2.5">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg border border-brand-accent/30 bg-brand-accent/10 text-brand-accent">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <h4 class="font-mono text-xs font-bold text-white uppercase tracking-tight">
+              Boleta de Honorarios del SII
+            </h4>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            Todos los valores son líquidos y respaldados con Boleta de Honorarios electrónica en Segunda Categoría emitida a tu nombre o empresa.
+          </p>
+        </div>
+
+        <!-- Pilar 3: Sin Letra Chica ni Dependencias -->
+        <div class="flex flex-col space-y-2.5 p-4 rounded-xl bg-brand-dark-card/60 border border-white/[0.04] transition-colors hover:border-brand-accent/20">
+          <div class="flex items-center space-x-2.5">
+            <div class="flex h-8 w-8 items-center justify-center rounded-lg border border-brand-accent/30 bg-brand-accent/10 text-brand-accent">
+              <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 7a2 2 0 012 2m4 0a6 6 0 01-7.743 5.743L11 17H9v2H7v2H4a1 1 0 01-1-1v-2.586a1 1 0 01.293-.707l5.964-5.964A6 6 0 1121 9z" />
+              </svg>
+            </div>
+            <h4 class="font-mono text-xs font-bold text-white uppercase tracking-tight">
+              Sin Letra Chica ni Dependencias
+            </h4>
+          </div>
+          <p class="text-xs text-slate-400 leading-relaxed">
+            No cobro mensualidades ocultas ni retengo accesos. La tienda y el código son 100% de tu propiedad desde el día de la entrega.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- E. CASO DE ESTUDIO EN VIVO (Prueba de Autoridad)                         -->
+  <!-- ========================================================================= -->
+  <section id="caso-estudio" class="py-16 sm:py-24 px-4 sm:px-6 max-w-5xl mx-auto w-full">
+    <div class="text-left mb-8">
+      <div class="inline-flex items-center space-x-2 font-mono text-xs font-semibold uppercase tracking-widest text-brand-accent mb-3">
+        <span>[ // PRUEBA DE AUTORIDAD TÉCNICA ]</span>
+      </div>
+      <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-white">
+        De la teoría al volumen real en producción.
+      </h2>
+    </div>
+
+    <div class="rounded-3xl border border-white/[0.1] bg-brand-dark-card/90 p-6 sm:p-10 backdrop-blur-md shadow-2xl relative overflow-hidden">
+      
+      <!-- Glow superior -->
+      <div class="absolute -top-16 -right-16 w-64 h-64 bg-brand-accent/[0.08] rounded-full blur-3xl pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Información del Caso -->
+        <div class="lg:col-span-7 space-y-4">
+          <!-- Badge -->
+          <div class="inline-flex items-center space-x-2 rounded-full border border-emerald-500/30 bg-emerald-500/10 px-3.5 py-1 text-xs font-mono font-medium text-emerald-400">
+            <span class="h-2 w-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span>ENTORNO DE PRODUCCIÓN EN VIVO</span>
+          </div>
+
+          <!-- Título -->
+          <h3 class="text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            Abyssal Relics <span class="font-mono text-base font-normal text-slate-400">(abyssalrelics.cl)</span>
+          </h3>
+
+          <!-- Detalle técnico -->
+          <p class="text-sm sm:text-base text-slate-300 leading-relaxed">
+            Marca de joyería e-commerce desarrollada y operada internamente. Implementación integral: arquitectura personalizada en Liquid, estandarización visual en WebP, automatización de notificaciones postventa y logística optimizada para envíos en 24-48 hrs en todo Chile.
+          </p>
+
+          <!-- Métricas del Caso -->
+          <div class="grid grid-cols-3 gap-3 pt-3">
+            <div class="p-3 rounded-xl bg-brand-dark-deep/90 border border-white/[0.05]">
+              <div class="text-[10px] font-mono text-slate-500 uppercase">LCP Móvil</div>
+              <div class="font-mono text-lg font-bold text-brand-accent">0.78s</div>
+              <div class="text-[9px] text-slate-400 font-mono">Red 4G Entel/Wom</div>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-dark-deep/90 border border-white/[0.05]">
+              <div class="text-[10px] font-mono text-slate-500 uppercase">Fulfillment</div>
+              <div class="font-mono text-lg font-bold text-white">24-48 hrs</div>
+              <div class="text-[9px] text-slate-400 font-mono">Blue Express API</div>
+            </div>
+            <div class="p-3 rounded-xl bg-brand-dark-deep/90 border border-white/[0.05]">
+              <div class="text-[10px] font-mono text-slate-500 uppercase">Conversión</div>
+              <div class="font-mono text-lg font-bold text-white">+38%</div>
+              <div class="text-[9px] text-emerald-400 font-mono">Checkout local</div>
+            </div>
+          </div>
+
+          <!-- Enlace externo -->
+          <div class="pt-4">
+            <a
+              href="https://abyssalrelics.cl"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="group inline-flex items-center space-x-2.5 rounded-xl border border-brand-accent/40 bg-brand-accent/[0.08] px-5 py-3 text-xs font-mono font-bold text-brand-accent transition-all duration-200 hover:border-brand-accent hover:bg-brand-accent hover:text-brand-dark hover:shadow-neon-glow"
+            >
+              <span>Inspeccionar tienda en vivo</span>
+              <span class="text-sm transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5">↗</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Visual / Terminal de Inspección -->
+        <div class="lg:col-span-5">
+          <div class="rounded-2xl border border-white/[0.08] bg-brand-dark-deep/95 p-5 font-mono text-xs shadow-xl">
+            <!-- Barra de estado tipo terminal -->
+            <div class="flex items-center justify-between border-b border-white/[0.06] pb-3 mb-4 text-slate-500 text-[11px]">
+              <div class="flex space-x-1.5">
+                <span class="h-2.5 w-2.5 rounded-full bg-red-500/80"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-yellow-500/80"></span>
+                <span class="h-2.5 w-2.5 rounded-full bg-emerald-500/80"></span>
+              </div>
+              <span>audit://abyssalrelics.cl</span>
+            </div>
+
+            <div class="space-y-2.5 text-slate-300 text-[11px]">
+              <p class="text-slate-500">// Stack y Configuración Operativa</p>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Motor Liquid:</span>
+                <span class="text-emerald-400 font-semibold">OS 2.0 Custom</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Assets Pipeline:</span>
+                <span class="text-brand-accent">WebP auto-lossless</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Pasarelas activas:</span>
+                <span class="text-white">Webpay Plus + MP</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Notificaciones:</span>
+                <span class="text-white">Custom Brand HTML</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Courier nacional:</span>
+                <span class="text-brand-accent">Blue Express Direct</span>
+              </div>
+              <div class="flex justify-between">
+                <span class="text-slate-400">Cumplimiento SERNAC:</span>
+                <span class="text-emerald-400">Auditado 100%</span>
+              </div>
+            </div>
+
+            <div class="mt-4 pt-3 border-t border-white/[0.06] text-[10px] text-slate-500 flex justify-between items-center">
+              <span>ESTADO DE INSTANCIA: EN LÍNEA</span>
+              <span class="text-emerald-400 font-bold">200 OK</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- F. SECCIÓN DE CIERRE / CONTACTO DIRECTO                                 -->
+  <!-- ========================================================================= -->
+  <section class="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto w-full text-center">
+    <div class="relative rounded-3xl border border-brand-accent/30 bg-gradient-to-b from-brand-dark-card to-brand-dark-deep p-8 sm:p-14 backdrop-blur-xl shadow-2xl overflow-hidden">
+      
+      <!-- Fondo resplandeciente -->
+      <div class="absolute inset-0 bg-radial-vignette opacity-50 pointer-events-none"></div>
+
+      <div class="relative z-10 flex flex-col items-center">
+        <!-- Indicador de canal directo -->
+        <div class="inline-flex items-center space-x-2 font-mono text-xs uppercase tracking-widest text-brand-accent mb-4">
+          <span class="h-2 w-2 rounded-full bg-brand-accent animate-ping"></span>
+          <span>SIN INTERMEDIARIOS • CONTACTO DIRECTO</span>
+        </div>
+
+        <!-- H2 -->
+        <h2 class="text-2xl sm:text-4xl font-bold tracking-tight text-white max-w-2xl">
+          ¿Tu tienda se siente lenta, genérica o estás por lanzar un nuevo proyecto?
+        </h2>
+
+        <!-- Párrafo -->
+        <p class="mt-4 text-sm sm:text-base text-slate-300 max-w-xl leading-relaxed">
+          Conversemos 10 minutos por WhatsApp. Analizo tu web actual o tu maqueta y te entrego un diagnóstico técnico honesto, sin compromisos ni costos ocultos.
+        </p>
+
+        <!-- Botón CTA WhatsApp -->
+        <div class="mt-8 flex flex-col sm:flex-row items-center gap-4">
+          <a
+            href={WHATSAPP_AUDIT_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group inline-flex items-center space-x-3 rounded-xl bg-brand-accent px-8 py-4 text-sm font-mono font-bold text-brand-dark transition-all duration-300 hover:bg-brand-accent-hover hover:shadow-neon-glow hover:-translate-y-0.5 active:translate-y-0"
+          >
+            <!-- WhatsApp SVG Icon -->
+            <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+              <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.07-.996-.048-.229-.074-.523-.195-.873-.346-1.537-.662-2.536-2.225-2.613-2.326-.077-.102-.627-.835-.627-1.591 0-.756.396-1.127.536-1.282.141-.155.308-.194.41-.194.103 0 .205.003.296.007.095.005.223-.036.349.266.13.312.443 1.077.482 1.155.039.078.065.17.013.273-.051.103-.077.168-.154.258-.077.09-.162.201-.231.27-.078.077-.159.16-.068.316.09.155.401.662.861 1.072.593.528 1.094.692 1.249.77.155.077.245.064.336-.039.091-.103.39-.453.493-.609.104-.155.207-.129.349-.077.142.052.903.426 1.058.504.155.077.258.116.296.181.039.064.039.373-.105.778zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.981-1.396C8.423 21.499 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.63 0-3.15-.487-4.43-1.325l-.317-.206-2.964.83.844-2.887-.227-.333C4.015 14.945 3.5 13.518 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/>
+            </svg>
+            <span>Iniciar conversación por WhatsApp</span>
+          </a>
+        </div>
+
+        <!-- Enlace de respaldo por correo -->
+        <div class="mt-5">
+          <a
+            href={`mailto:${EMAIL_CONTACT}`}
+            class="text-xs font-mono text-slate-400 hover:text-brand-accent transition-colors underline decoration-slate-600 underline-offset-4"
+          >
+            O escríbeme directamente a {EMAIL_CONTACT}
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ========================================================================= -->
+  <!-- G. BOTÓN FLOTANTE FIJO (WhatsApp con Pulso Neón)                         -->
+  <!-- ========================================================================= -->
+  <aside class="fixed bottom-6 right-6 z-50">
+    <a
+      href={WHATSAPP_AUDIT_URL}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Contactar por WhatsApp a Hastur Studio"
+      class="group relative flex items-center space-x-2 rounded-full bg-brand-accent px-4 py-3 text-brand-dark shadow-neon-glow transition-all duration-300 hover:scale-105 hover:bg-brand-accent-hover active:scale-95"
+    >
+      <!-- Pulso sutil detrás del botón -->
+      <span class="absolute inset-0 rounded-full bg-brand-accent opacity-40 animate-ping-slow pointer-events-none" aria-hidden="true"></span>
+
+      <!-- Icono SVG WhatsApp -->
+      <svg class="relative w-5 h-5 fill-current" viewBox="0 0 24 24">
+        <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.312.045-.634.07-.996-.048-.229-.074-.523-.195-.873-.346-1.537-.662-2.536-2.225-2.613-2.326-.077-.102-.627-.835-.627-1.591 0-.756.396-1.127.536-1.282.141-.155.308-.194.41-.194.103 0 .205.003.296.007.095.005.223-.036.349.266.13.312.443 1.077.482 1.155.039.078.065.17.013.273-.051.103-.077.168-.154.258-.077.09-.162.201-.231.27-.078.077-.159.16-.068.316.09.155.401.662.861 1.072.593.528 1.094.692 1.249.77.155.077.245.064.336-.039.091-.103.39-.453.493-.609.104-.155.207-.129.349-.077.142.052.903.426 1.058.504.155.077.258.116.296.181.039.064.039.373-.105.778zM12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.981-1.396C8.423 21.499 10.155 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2zm0 18.2c-1.63 0-3.15-.487-4.43-1.325l-.317-.206-2.964.83.844-2.887-.227-.333C4.015 14.945 3.5 13.518 3.5 12c0-4.687 3.813-8.5 8.5-8.5s8.5 3.813 8.5 8.5-3.813 8.5-8.5 8.5z"/>
+      </svg>
+      <span class="relative hidden sm:inline-block font-mono text-xs font-bold tracking-tight">
+        Auditoría 1-a-1
+      </span>
+    </a>
+  </aside>
+
+  <!-- ========================================================================= -->
+  <!-- H. FOOTER                                                                -->
+  <!-- ========================================================================= -->
+  <footer class="mt-20 border-t border-white/[0.08] bg-brand-dark-surface/90 py-10 px-4 sm:px-6 w-full">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6 text-xs font-mono text-slate-500">
+      
+      <!-- Marca y copyright -->
+      <div class="flex flex-col sm:flex-row items-center gap-2 sm:gap-4 text-center sm:text-left">
+        <span class="font-bold text-white tracking-wider">HASTUR<span class="text-brand-accent">.studio</span></span>
+        <span class="hidden sm:inline text-white/20">•</span>
+        <span>© 2026 Hastur Studio. Todos los derechos reservados.</span>
+      </div>
+
+      <!-- Declaración de posicionamiento -->
+      <div class="text-center md:text-right text-slate-400">
+        Infraestructura y desarrollo para marcas independientes en Chile.
+      </div>
+
+    </div>
+
+    <div class="max-w-5xl mx-auto mt-6 pt-4 border-t border-white/[0.04] flex flex-wrap items-center justify-between text-[11px] font-mono text-slate-600">
+      <div class="flex items-center space-x-2">
+        <span class="h-1.5 w-1.5 rounded-full bg-brand-accent"></span>
+        <span>SISTEMA OPERATIVO Y DISPONIBLE PARA PROYECTOS EN CHILE</span>
+      </div>
+      <div>
+        <span>DESARROLLO DIRECTO POR BRUNO RUIZ</span>
+      </div>
+    </div>
+  </footer>
+</Layout>

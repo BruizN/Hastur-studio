@@ -1,0 +1,17 @@
+{
+  "name": "hastur-studio",
+  "version": "1.0.0",
+  "description": "Hastur Studio - Shopify Architecture & E-commerce Operations",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "@astrojs/tailwind": "^5.1.5",
+    "astro": "^4.16.18",
+    "tailwindcss": "^3.4.17"
+  }
+}
