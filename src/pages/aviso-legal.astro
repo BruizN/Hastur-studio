@@ -1,0 +1,221 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const PHONE_NUMBER = "56987753925";
+const WHATSAPP_BASE = `https://wa.me/${PHONE_NUMBER}`;
+const WHATSAPP_URL = `${WHATSAPP_BASE}?text=Hola%20Bruno,%20tengo%20una%20consulta%20sobre%20los%20t%C3%A9rminos%20de%20Hastur%20Studio`;
+const EMAIL_CONTACT = "brunoruizn@gmail.com";
+---
+
+<Layout
+  title="Aviso Legal & Transparencia Comercial | Hastur Studio Chile"
+  description="Individualización legal, régimen tributario ante el SII, condiciones de contratación y cumplimiento bajo Ley N° 19.496 y Decreto N° 3 (Reglamento de Comercio Electrónico)."
+>
+  <!-- Barra superior simplificada -->
+  <header class="sticky top-4 z-40 w-full px-4 sm:px-6">
+    <nav class="mx-auto max-w-4xl rounded-full border border-white/[0.08] bg-brand-dark-surface/85 px-4 sm:px-6 py-2.5 backdrop-blur-md shadow-2xl transition-all duration-300">
+      <div class="flex items-center justify-between">
+        <a href="/" class="group flex items-center space-x-2 font-mono text-base font-bold tracking-tight text-white transition-colors">
+          <span class="inline-block h-2 w-2 rounded-full bg-brand-accent animate-pulse-subtle"></span>
+          <span>HASTUR<span class="text-brand-accent">.studio</span></span>
+        </a>
+
+        <div class="flex items-center space-x-4">
+          <a
+            href="/"
+            class="text-xs font-mono tracking-wider uppercase text-slate-400 hover:text-brand-accent transition-colors flex items-center space-x-1"
+          >
+            <span>←</span>
+            <span>Volver a Inicio</span>
+          </a>
+
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden sm:inline-flex items-center space-x-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/[0.08] px-3.5 py-1 text-xs font-mono font-medium text-brand-accent hover:border-brand-accent hover:bg-brand-accent hover:text-brand-dark transition-all duration-200"
+          >
+            <span>WhatsApp Directo</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative pt-12 sm:pt-16 pb-20 px-4 sm:px-6 max-w-4xl mx-auto w-full">
+    <!-- Luz difusa de fondo -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-brand-accent/[0.06] blur-[100px] rounded-full pointer-events-none" aria-hidden="true"></div>
+
+    <!-- Encabezado de la página -->
+    <div class="relative mb-10 text-left">
+      <div class="inline-flex items-center space-x-2 rounded-full border border-brand-accent/20 bg-brand-accent/[0.06] px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-brand-accent mb-4">
+        <span>[ // NORMATIVA CHILENA & TRANSPARENCIA ]</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+        Aviso Legal & Términos de Contratación
+      </h1>
+      <p class="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
+        Información sobre la individualización del prestador, condiciones de prestación de servicios y marco regulatorio conforme a la Ley N° 19.496 de Protección de los Derechos de los Consumidores y el Decreto N° 3 (Reglamento de Comercio Electrónico de Chile).
+      </p>
+    </div>
+
+    <!-- Contenedor Legal Principal -->
+    <div class="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
+      
+      <!-- Ficha de Individualización del Proveedor (Decreto N° 3 Art. 3) -->
+      <section class="rounded-2xl border border-brand-accent/25 bg-brand-dark-card/90 p-6 sm:p-8 backdrop-blur-md shadow-xl">
+        <div class="flex items-center space-x-2 font-mono text-xs font-bold uppercase tracking-wider text-brand-accent mb-4">
+          <span class="h-2 w-2 rounded-full bg-brand-accent"></span>
+          <span>1. Individualización del Prestador del Servicio (Decreto N° 3 de Economía)</span>
+        </div>
+
+        <p class="text-xs sm:text-sm text-slate-300 mb-6">
+          En cumplimiento del Título II del Reglamento de Comercio Electrónico de la República de Chile (Decreto Supremo N° 3 del Ministerio de Economía, Fomento y Turismo), se informa la identidad del titular y prestador de los servicios ofrecidos en esta plataforma:
+        </p>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 font-mono text-xs">
+          <div class="rounded-xl border border-white/[0.06] bg-brand-dark-deep p-4">
+            <span class="text-slate-500 uppercase block mb-1">Nombre Completo del Titular</span>
+            <span class="text-white font-semibold text-sm">Bruno Maximiliano Ruiz Nahuelpán</span>
+          </div>
+
+          <div class="rounded-xl border border-white/[0.06] bg-brand-dark-deep p-4">
+            <span class="text-slate-500 uppercase block mb-1">Rol Único Tributario (RUT)</span>
+            <span class="text-brand-accent font-semibold text-sm">21.592.069-0</span>
+          </div>
+
+          <div class="rounded-xl border border-white/[0.06] bg-brand-dark-deep p-4">
+            <span class="text-slate-500 uppercase block mb-1">Nombre de Fantasía / Marca</span>
+            <span class="text-white font-semibold text-sm">Hastur Studio</span>
+          </div>
+
+          <div class="rounded-xl border border-white/[0.06] bg-brand-dark-deep p-4">
+            <span class="text-slate-500 uppercase block mb-1">Actividad / Giro Tributario SII</span>
+            <span class="text-slate-200">Servicios profesionales de desarrollo web y consultoría técnica de e-commerce (2da Categoría)</span>
+          </div>
+
+          <div class="rounded-xl border border-white/[0.06] bg-brand-dark-deep p-4">
+            <span class="text-slate-500 uppercase block mb-1">Canal Principal de Contacto</span>
+            <a href={WHATSAPP_URL} class="text-brand-accent hover:underline">+56 9 8775 3925 (WhatsApp)</a>
+          </div>
+
+          <div class="rounded-xl border border-white/[0.06] bg-brand-dark-deep p-4">
+            <span class="text-slate-500 uppercase block mb-1">Correo Electrónico de Contacto</span>
+            <a href={`mailto:${EMAIL_CONTACT}`} class="text-brand-accent hover:underline">{EMAIL_CONTACT}</a>
+          </div>
+        </div>
+
+        <div class="mt-4 pt-3 border-t border-white/[0.06] text-xs font-mono text-slate-500">
+          Ubicación y Jurisdicción: República de Chile. Prestación de servicios telemáticos para todo el territorio nacional.
+        </div>
+      </section>
+
+      <!-- 2. Régimen Tributario y Emisión de Documentos SII -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">2.</span>
+          <span>Régimen Tributario & Emisión de Boletas de Honorarios (SII)</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          Los servicios prestados por Hastur Studio se rigen bajo el régimen tributario de <strong>Segunda Categoría</strong> del Servicio de Impuestos Internos (SII) de Chile, conforme al artículo 42 N° 2 de la Ley sobre Impuesto a la Renta.
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-400">
+          <li>Por cada anticipo o saldo recibido se emite de forma inmediata la respectiva <strong class="text-slate-200">Boleta de Honorarios Electrónica</strong> oficial en el portal del SII.</li>
+          <li>Los montos acordados en las propuestas comerciales se expresan en <strong>Pesos Chilenos (CLP) líquidos</strong>.</li>
+          <li>La retención legal correspondiente al año fiscal en curso es absorbida o declarada según corresponda legalmente entre personas naturales o empresas que actúen como retenedores.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Metodología de Contratación y Estructura de Pagos -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">3.</span>
+          <span>Estructura de Pagos & Hitos de Desarrollo</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-4">
+          Para garantizar una relación comercial transparente, segura y sin fricciones:
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div class="rounded-xl border border-brand-accent/20 bg-brand-dark-deep p-4">
+            <span class="font-mono text-xs font-bold text-brand-accent block mb-1">50% ANTICIPO INICIAL</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Formaliza el compromiso de trabajo, la reserva de horas en agenda y el inicio de la arquitectura técnica o auditoría.
+            </p>
+          </div>
+          <div class="rounded-xl border border-brand-accent/20 bg-brand-dark-deep p-4">
+            <span class="font-mono text-xs font-bold text-brand-accent block mb-1">50% CONTRA ENTREGA PROBADA</span>
+            <p class="text-xs text-slate-300 leading-relaxed">
+              Se abona una vez presentado el trabajo finalizado en entorno de pruebas, comprobado su funcionamiento y verificado por el cliente antes del despliegue final.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4. Plazos de Entrega y Condición de Recepción de Activos -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">4.</span>
+          <span>Plazos de Entrega & Cómputo de Días Hábiles</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          Los tiempos de entrega estimados (3 a 4 días hábiles para Packs de Optimización; 10 a 15 días hábiles para Tiendas Llave en Mano; 48 a 72 horas hábiles para Módulos Técnicos) se rigen por la siguiente regla operativa:
+        </p>
+        <div class="rounded-xl bg-brand-dark-deep border-l-2 border-brand-accent p-4 text-xs font-mono text-slate-300">
+          <strong class="text-white">Condición de Inicio:</strong> El cómputo de los días hábiles inicia una vez que el cliente entrega la totalidad de los activos digitales requeridos: accesos de colaborador en Shopify, logotipos en alta resolución, manual o guía visual de marca, textos base y catálogo inicial de productos.
+        </div>
+      </section>
+
+      <!-- 5. Propiedad Intelectual y Soberanía Tecnológica -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">5.</span>
+          <span>Propiedad Intelectual & Sin Costos de Amarre</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-2">
+          Una vez cancelado el 100% de los honorarios convenidos:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-400">
+          <li>El cliente es el propietario absoluto de todo el código Liquid, CSS, JavaScript y configuraciones desarrolladas en su tienda.</li>
+          <li>Hastur Studio no cobra rentas mensuales de mantenimiento obligatorio ni retiene accesos ni claves.</li>
+          <li>Cualquier desarrollador o equipo interno podrá continuar modificando o ampliando la infraestructura en el futuro.</li>
+        </ul>
+      </section>
+
+      <!-- 6. Garantía de Soporte Post-Entrega -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">6.</span>
+          <span>Garantía Técnica (30 Días)</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Cada desarrollo cuenta con <strong>30 días corridos de garantía técnica</strong> a contar de la fecha de entrega. Esta garantía cubre la corrección sin costo adicional de cualquier bug, desajuste responsive o comportamiento anómalo originado en el código desarrollado por Hastur Studio. La garantía no cubre fallas producidas por alteraciones de código posteriores realizadas por terceros, caídas de servicios de terceros (Shopify, Transbank, Mercado Pago, couriers) o instalación de aplicaciones externas incompatibles.
+        </p>
+      </section>
+
+      <!-- 7. Legislación y Resolución de Conflictos -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">7.</span>
+          <span>Legislación Aplicable & Jurisdicción</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Las relaciones comerciales entre el cliente y Hastur Studio se rigen por las leyes de la República de Chile, en particular la Ley N° 19.496 sobre Protección de los Derechos de los Consumidores y el Decreto N° 3 del Ministerio de Economía. Cualquier divergencia será sometida a los canales de mediación correspondientes o a los tribunales ordinarios de justicia chilenos.
+        </p>
+      </section>
+
+    </div>
+
+    <!-- Enlaces de pie de página -->
+    <div class="mt-12 pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-400">
+      <div class="flex items-center space-x-4">
+        <a href="/" class="hover:text-brand-accent transition-colors">← Volver al Inicio</a>
+        <span>•</span>
+        <a href="/privacidad" class="hover:text-brand-accent transition-colors">Política de Privacidad</a>
+      </div>
+      <div>
+        <span>Última actualización: Octubre 2026</span>
+      </div>
+    </div>
+  </main>
+</Layout>

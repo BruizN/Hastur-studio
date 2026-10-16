@@ -1,0 +1,166 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const PHONE_NUMBER = "56987753925";
+const WHATSAPP_BASE = `https://wa.me/${PHONE_NUMBER}`;
+const WHATSAPP_URL = `${WHATSAPP_BASE}?text=Hola%20Bruno,%20tengo%20una%20consulta%20sobre%20la%20pol%C3%ADtica%20de%20privacidad`;
+const EMAIL_CONTACT = "brunoruizn@gmail.com";
+---
+
+<Layout
+  title="Política de Privacidad & Protección de Datos | Hastur Studio Chile"
+  description="Tratamiento de datos personales según la Ley N° 19.628 de Chile, protocolo de cuentas de colaborador en Shopify y estricta confidencialidad comercial."
+>
+  <!-- Barra superior simplificada -->
+  <header class="sticky top-4 z-40 w-full px-4 sm:px-6">
+    <nav class="mx-auto max-w-4xl rounded-full border border-white/[0.08] bg-brand-dark-surface/85 px-4 sm:px-6 py-2.5 backdrop-blur-md shadow-2xl transition-all duration-300">
+      <div class="flex items-center justify-between">
+        <a href="/" class="group flex items-center space-x-2 font-mono text-base font-bold tracking-tight text-white transition-colors">
+          <span class="inline-block h-2 w-2 rounded-full bg-brand-accent animate-pulse-subtle"></span>
+          <span>HASTUR<span class="text-brand-accent">.studio</span></span>
+        </a>
+
+        <div class="flex items-center space-x-4">
+          <a
+            href="/"
+            class="text-xs font-mono tracking-wider uppercase text-slate-400 hover:text-brand-accent transition-colors flex items-center space-x-1"
+          >
+            <span>←</span>
+            <span>Volver a Inicio</span>
+          </a>
+
+          <a
+            href={WHATSAPP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hidden sm:inline-flex items-center space-x-1.5 rounded-full border border-brand-accent/30 bg-brand-accent/[0.08] px-3.5 py-1 text-xs font-mono font-medium text-brand-accent hover:border-brand-accent hover:bg-brand-accent hover:text-brand-dark transition-all duration-200"
+          >
+            <span>WhatsApp Directo</span>
+            <span>→</span>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main class="relative pt-12 sm:pt-16 pb-20 px-4 sm:px-6 max-w-4xl mx-auto w-full">
+    <!-- Luz difusa de fondo -->
+    <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-80 h-80 bg-brand-accent/[0.06] blur-[100px] rounded-full pointer-events-none" aria-hidden="true"></div>
+
+    <!-- Encabezado de la página -->
+    <div class="relative mb-10 text-left">
+      <div class="inline-flex items-center space-x-2 rounded-full border border-brand-accent/20 bg-brand-accent/[0.06] px-3.5 py-1 text-xs font-mono uppercase tracking-wider text-brand-accent mb-4">
+        <span>[ // PROTECCIÓN DE DATOS • LEY N° 19.628 ]</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-bold tracking-tight text-white leading-tight">
+        Política de Privacidad & Tratamiento de Datos
+      </h1>
+      <p class="mt-4 text-sm sm:text-base text-slate-400 max-w-2xl leading-relaxed">
+        Declaración de transparencia sobre el resguardo de tus datos de contacto y la custodia de credenciales operativas de tu tienda Shopify, bajo la normativa de la República de Chile.
+      </p>
+    </div>
+
+    <!-- Contenedor Legal Principal -->
+    <div class="space-y-8 text-slate-300 text-sm sm:text-base leading-relaxed">
+
+      <!-- Responsable del Tratamiento -->
+      <section class="rounded-2xl border border-brand-accent/25 bg-brand-dark-card/90 p-6 sm:p-8 backdrop-blur-md shadow-xl">
+        <div class="flex items-center space-x-2 font-mono text-xs font-bold uppercase tracking-wider text-brand-accent mb-4">
+          <span class="h-2 w-2 rounded-full bg-brand-accent"></span>
+          <span>1. Responsable del Tratamiento de Datos</span>
+        </div>
+        <p class="text-xs sm:text-sm text-slate-300 mb-4">
+          Conforme a la Ley N° 19.628 sobre Protección de la Vida Privada de Chile, el responsable del tratamiento y resguardo de la información es:
+        </p>
+        <div class="p-4 rounded-xl border border-white/[0.06] bg-brand-dark-deep font-mono text-xs space-y-1.5">
+          <p><strong class="text-white">Nombre:</strong> Bruno Maximiliano Ruiz Nahuelpán</p>
+          <p><strong class="text-white">RUT:</strong> 21.592.069-0</p>
+          <p><strong class="text-white">Marca Comercial:</strong> Hastur Studio</p>
+          <p><strong class="text-white">Contacto:</strong> brunoruizn@gmail.com | +56 9 8775 3925</p>
+          <p><strong class="text-white">Jurisdicción:</strong> República de Chile</p>
+        </div>
+      </section>
+
+      <!-- 2. Origen y Naturaleza de los Datos Recopilados -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">2.</span>
+          <span>Datos que se Recopilan & Mecanismo de Entrada</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          Este sitio web es un entorno estático de alto rendimiento. <strong>No contiene formularios intrusivos que almacenen tus datos en bases de datos externas de terceros ni scripts de seguimiento publicitario masivo</strong>.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          La información sólo se recopila cuando el usuario decide voluntariamente iniciar contacto a través de los canales habilitados:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-400">
+          <li><strong>Vía WhatsApp o Teléfono:</strong> Nombre, número telefónico y la información que compartas sobre tu proyecto o tienda e-commerce.</li>
+          <li><strong>Vía Correo Electrónico:</strong> Dirección de correo electrónico, nombre y detalles técnicos del requerimiento.</li>
+          <li><strong>Para Facturación (SII):</strong> Nombre/Razón Social, RUT, giro y domicilio para la correcta emisión de la Boleta de Honorarios Electrónica.</li>
+        </ul>
+      </section>
+
+      <!-- 3. Finalidad del Uso de los Datos -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">3.</span>
+          <span>Finalidad Estricta del Tratamiento</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          Toda información proporcionada se utiliza con un único propósito operativo:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-400">
+          <li>Atender tu solicitud de auditoría técnica o cotización de desarrollo.</li>
+          <li>Coordinar las etapas de trabajo, pruebas y entregas del proyecto acordado.</li>
+          <li>Cumplir con las obligaciones legales y tributarias ante el Servicio de Impuestos Internos (SII).</li>
+        </ul>
+        <div class="mt-4 p-3.5 rounded-xl border border-brand-accent/20 bg-brand-dark-deep text-xs font-mono text-slate-300">
+          <span class="text-brand-accent font-bold">Cero Spam:</span> Jamás venderé, cederé, alquilaré ni transferiré tus datos de contacto a listas de difusión comercial o plataformas publicitarias de terceros.
+        </div>
+      </section>
+
+      <!-- 4. Protocolo de Seguridad en Accesos a Shopify (Colaboradores) -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">4.</span>
+          <span>Protocolo de Seguridad para Tiendas Shopify</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          La seguridad de tu tienda es prioritaria:
+        </p>
+        <ul class="list-disc list-inside space-y-2 text-xs sm:text-sm text-slate-400">
+          <li><strong>Cuentas de Colaborador Oficiales:</strong> El acceso a tu panel de Shopify se gestiona mediante la solicitud de colaborador de Shopify Partners, requiriendo tu autorización previa mediante código de seguridad de 4 dígitos.</li>
+          <li><strong>Sin solicitud de contraseñas:</strong> Nunca se te solicitará la contraseña de tu cuenta principal ni claves de correos corporativos.</li>
+          <li><strong>Revocación al finalizar:</strong> Al término de la garantía del proyecto, los accesos pueden ser revocados por el cliente o eliminados de mutuo acuerdo.</li>
+        </ul>
+      </section>
+
+      <!-- 5. Derechos del Titular (Derechos ARCO) -->
+      <section class="rounded-2xl border border-white/[0.08] bg-brand-dark-card/80 p-6 sm:p-8 backdrop-blur-md">
+        <h2 class="font-mono text-base font-bold text-white mb-3 flex items-center space-x-2">
+          <span class="text-brand-accent">5.</span>
+          <span>Ejercicio de Derechos (Acceso, Rectificación y Cancelación)</span>
+        </h2>
+        <p class="text-slate-300 text-sm leading-relaxed mb-3">
+          De acuerdo con el artículo 12 de la Ley N° 19.628, tienes el derecho de solicitar en cualquier momento la información sobre tus datos personales registrados, requerir su rectificación o exigir la eliminación definitiva de cualquier registro de contacto que no deba conservarse por mandatos tributarios del SII.
+        </p>
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Para ejercer estos derechos, simplemente envía una comunicación con el asunto <em class="text-white">"Derechos de Datos Personales"</em> a <a href={`mailto:${EMAIL_CONTACT}`} class="text-brand-accent hover:underline">{EMAIL_CONTACT}</a> o vía WhatsApp al <a href={WHATSAPP_URL} class="text-brand-accent hover:underline">+56 9 8775 3925</a>.
+        </p>
+      </section>
+
+    </div>
+
+    <!-- Enlaces de pie de página -->
+    <div class="mt-12 pt-8 border-t border-white/[0.08] flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-slate-400">
+      <div class="flex items-center space-x-4">
+        <a href="/" class="hover:text-brand-accent transition-colors">← Volver al Inicio</a>
+        <span>•</span>
+        <a href="/aviso-legal" class="hover:text-brand-accent transition-colors">Aviso Legal & Términos</a>
+      </div>
+      <div>
+        <span>Última actualización: Octubre 2026</span>
+      </div>
+    </div>
+  </main>
+</Layout>

@@ -21,7 +21,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://hastur.s
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title}</title>
     <meta name="description" content={description} />
-    <meta name="author" content="Bruno Ruiz - Hastur Studio" />
+    <meta name="author" content="Bruno Maximiliano Ruiz Nahuelpán - Hastur Studio" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#070908" />
     <link rel="canonical" href={canonicalURL} />
@@ -55,6 +55,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://hastur.s
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": "Hastur Studio",
+      "founder": {
+        "@type": "Person",
+        "name": "Bruno Maximiliano Ruiz Nahuelpán",
+        "taxID": "21592069-0"
+      },
       "image": "https://hastur.studio/og-image.jpg",
       "description": "Shopify Architecture & E-commerce Operations. Desarrollo técnico de tiendas Shopify, WPO extremo y pasarelas de pago chilenas.",
       "telephone": "+56987753925",
@@ -73,7 +78,8 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site || 'https://hastur.s
         "Web Performance Optimization (WPO)",
         "Webpay Plus",
         "Mercado Pago Chile",
-        "SERNAC Compliance E-commerce"
+        "SERNAC Compliance E-commerce",
+        "Lioren DTE Facturacion Electronica"
       ]
     })} />
   </head>
